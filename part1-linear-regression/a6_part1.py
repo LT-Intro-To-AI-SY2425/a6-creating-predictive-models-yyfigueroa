@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 from sklearn.linear_model import LinearRegression
 
 data = pd.read_csv("part1-linear-regression/blood_pressure_data.csv")
-x = data["Age"].values
+x = data["Age"].values 
 y = data["Blood Pressure"].values
 
 # Use reshape to turn the x values into 2D arrays:
