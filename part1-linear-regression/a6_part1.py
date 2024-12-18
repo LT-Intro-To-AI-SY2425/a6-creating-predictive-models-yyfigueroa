@@ -11,7 +11,7 @@ y = data["Blood Pressure"].values
 x = x.reshape(-1,1)
 
 # Create the model
-model = LinearRegression()
+model = LinearRegression().fit(x, y)
 # Find the coefficient, bias, and r squared values. 
 coefficient = round(float(model.coef_[0]), 2)
 bias = round(float(model.intercept_), 2)
@@ -23,6 +23,7 @@ print(f"R-squared value: {r_squared}")
 
 
 # Predict the the blood pressure of someone who is 43 years old.
+x_predict = 42
 # Print out the prediction
 prediction = model.predict(np.array([[43]]))
 print(f"Predicted blood pressure for a 43-year-old: {prediction[0]:.2f}")
