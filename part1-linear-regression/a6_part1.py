@@ -14,8 +14,8 @@ x = x.reshape(-1,1)
 model = LinearRegression()
 model.fit(x, y)
 # Find the coefficient, bias, and r squared values. 
-coefficient = round(model.coef_[0], 2)
-bias = round(model.intercept_, 2)
+coefficient = round(float(model.coef_[0]), 2)
+bias = round(float(model.intercept_), 2))
 r_squared = round(model.score(x, y), 2)
 # Each should be a float and rounded to two decimal places. 
 # Print out the linear equation and r squared value
