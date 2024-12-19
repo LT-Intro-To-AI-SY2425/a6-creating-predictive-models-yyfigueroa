@@ -23,8 +23,8 @@ xtrain, xtest, ytrain, ytest = train_test_split(x.reshape(-1, 1), y, test_size=0
 
 # Find the coefficient, bias, and r squared values. 
 # Each should be a float and rounded to two decimal places. 
-coefficient = round(model.coef_[0], 2)  # Coefficient (slope)
-bias = round(model.intercept_, 2)  # Intercept (bias)
+coefficient = round(float(model.coef_[0]), 2)  # Coefficient (slope)
+bias = round(float(model.intercept_), 2)  # Intercept (bias)
 r_squared = round(model.score(xtrain, ytrain), 2)  # R-squared value
 
 
