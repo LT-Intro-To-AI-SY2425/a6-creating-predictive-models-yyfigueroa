@@ -13,7 +13,7 @@ xtrain, xtest, ytrain, ytest = train_test_split(x, y, test_size=0.2, random_stat
 
 
 #create linear regression model
-model = LinearRegression()
+model = LinearRegression().fit(xtrain, ytrain)
 
 
 #Find and print the coefficients, intercept, and r squared values. 
@@ -24,5 +24,13 @@ r_squared = round(model.score(xtrain, ytrain), 2)
 
 #Loop through the data and print out the predicted prices and the 
 #actual prices
+predict = model.predict(xtest)
+predict = np.around(predict, 2)
+print(predict)
 print("***************")
 print("Testing Results")
+for index in range(len(xtest)):
+    actual = ytest[index] 
+    predicted_y = predict[index] 
+    x_coord = xtest[index] 
+    print(f"Actual Price: {actual} Predicted value: {predicted_y}")
