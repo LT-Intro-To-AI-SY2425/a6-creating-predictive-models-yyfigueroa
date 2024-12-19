@@ -24,13 +24,12 @@ x_train, x_test, y_train, y_test = train_test_split(x_scaled, y, test_size=0.2, 
 
 
 # Step 5: Fit the data
-log_reg = linear_model.LogisticRegression()
-log_reg.fit(x_train, y_train)
+
 
 
 
 # Step 6: Create a LogsiticRegression object and fit the data
-
+model = linear_model.LogisticRegression().fit(x_train, y_train
 # Step 7: Print the score to see the accuracy of the model
 accuracy = log_reg.score(x_test, y_test)
 print("Accuracy:", accuracy)
