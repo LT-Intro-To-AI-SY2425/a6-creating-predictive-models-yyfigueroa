@@ -21,9 +21,15 @@ model = LinearRegression()
 
 # Find the coefficient, bias, and r squared values. 
 # Each should be a float and rounded to two decimal places. 
+<<<<<<< HEAD
 coefficient = round(model.coef_[0], 2)  
 bias = round(model.intercept_, 2)  
 r_squared = round(model.score(xtrain, ytrain), 2)  
+=======
+coefficient = round(float(model.coef_[0]), 2)  # Coefficient (slope)
+bias = round(float(model.intercept_), 2)  # Intercept (bias)
+r_squared = round(model.score(xtrain, ytrain), 2)  # R-squared value
+>>>>>>> b146e00505b2e0aa4ce7aff0d44a34b0e4b15b72
 
 
 
