@@ -23,7 +23,7 @@ print(f"R-squared value: {r_squared}")
 
 
 # Predict the the blood pressure of someone who is 43 years old.
-x_predict = 42
+x_predict = 43
 # Print out the prediction
 prediction = model.predict(np.array([[43]]))
 print(f"Predicted blood pressure for a 43-year-old: {prediction[0]:.2f}")
